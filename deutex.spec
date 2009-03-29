@@ -1,6 +1,6 @@
 %define version 4.4.0
 %define name	deutex
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 %define	Summary	A utility for modifying the graphics of Doom IWAD and PWAD files
 
