@@ -11,10 +11,9 @@ Release:	%{release}
 Source0:	http://www.teaser.fr/~amajorel/deutex/%{name}-%{version}.tar.bz2
 URL:		http://www.deutex.com/
 Group:		Games/Arcade
-License:	GPL
+License:	GPLv2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	SDL-devel smpeg-devel SDL_mixer-devel SDL_net-devel
-BuildRequires:	automake sed
 
 %description
 DeuTex is a wad composer for Doom, Heretic, Hexen and Strife. It can be used to extract the lumps
@@ -31,21 +30,20 @@ picture format). In addition, DeuTex has functions such as merging wads, etc.
 
 %install
 rm -rf %{buildroot}
-install -d %{buildroot}/%{_bindir}/deutex
-install -d %{buildroot}/%{_bindir}/deusf
+mkdir -p %{buildroot}/%{_bindir}
+mkdir -p %{buildroot}/%{_prefix}/man/man6/
+mkdir -p %{buildroot}/%_mandir/
 
-%post
-%{update_menus}
+make install PREFIX=%{buildroot}/%{_prefix}
 
-%postun
-%{clean_menus}
+mv %{buildroot}/%{_prefix}/man/man6/ %{buildroot}/%_mandir/man6/
 
 %clean
 rm -rf %{buildroot}
 
 %files
-# no %doc ?
+%doc CHANGES LICENSE README COPYING TODO COPYING.LIB VERSION
 %defattr (-,root,root)
 %{_bindir}/deutex
 %{_bindir}/deusf
-
+%_mandir/man6/*
