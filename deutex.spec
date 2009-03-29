@@ -9,6 +9,10 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Source0:	http://www.teaser.fr/~amajorel/deutex/%{name}-%{version}.tar.bz2
+# this patch s needed otherwise we cannot see fatal error on start, used
+# to fix a segfault on start, as code was not 64 bits clean
+Patch0:     deutex-4.4.0-fix-error-on-startup.diff
+Patch1:     deutex-4.4.0-fix-error-on-64b.diff
 URL:		http://www.deutex.com/
 Group:		Games/Arcade
 License:	GPLv2
@@ -25,6 +29,9 @@ picture format). In addition, DeuTex has functions such as merging wads, etc.
 
 %prep 
 %setup -q -n %{name}-%{version}
+%patch0 -p0
+%patch1 -p0
+
 %build
 %make
 
