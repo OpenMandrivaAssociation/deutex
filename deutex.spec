@@ -33,7 +33,7 @@ picture format). In addition, DeuTex has functions such as merging wads, etc.
 %patch1 -p0
 
 %build
-%make
+%make CFLAGS="%optflags" LDFLAGS="%ldflags"
 
 %install
 rm -rf %{buildroot}
