@@ -1,0 +1,28 @@
+Index: src/deutex.c
+===================================================================
+--- src/deutex.c
++++ src/deutex.c	2009-03-29 15:59:52.000000000 +0200
+@@ -839,6 +839,10 @@
+      "|  NOT to Olivier Montanuy !                        |\n"
+      "+---------------------------------------------------+\n\n");
+ #endif
++   /*
++   ** print on screen or file?
++   */
++   PrintInit(FALSE);
+ 
+    /* Sanity checks */
+    check_types ();
+@@ -876,11 +880,7 @@
+    /*setbuf(stdout,(char *)NULL);*/
+    setvbuf(stdout,NULL,_IOLBF,BUFSIZ);
+ #endif   /*OS2*/
+-   /*
+-   ** print on screen or file?
+-   */
+-   PrintInit(FALSE);
+-   PrintVerbosity(2);
++      PrintVerbosity(2);
+    /*
+    ** copyright notice
+    */

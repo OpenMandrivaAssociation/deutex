@@ -1,0 +1,17 @@
+ndex: src/deutex.h
+===================================================================
+--- src/deutex.h
++++ src/deutex.h	2009-03-29 16:10:57.000000000 +0200
+@@ -43,10 +43,10 @@
+ /*long = Int32 on a 32 bit processor*/
+ typedef char           Int8;
+ typedef short          Int16;
+-typedef long           Int32;
++typedef int            Int32;
+ typedef unsigned char  UInt8;
+ typedef unsigned short UInt16;
+-typedef unsigned long  UInt32;
++typedef unsigned int   UInt32;
+ #endif
+ 
+ #if defined DeuTex
