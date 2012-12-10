@@ -54,3 +54,30 @@ rm -rf %{buildroot}
 %{_bindir}/deutex
 %{_bindir}/deusf
 %_mandir/man6/*
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 4.4.0-3mdv2011.0
++ Revision: 610238
+- rebuild
+
+* Fri Apr 30 2010 Funda Wang <fwang@mandriva.org> 4.4.0-2mdv2010.1
++ Revision: 541253
+- use flags
+
+* Sun Mar 29 2009 Michael Scherer <misc@mandriva.org> 4.4.0-2mdv2009.1
++ Revision: 362134
+- fix segfault on x86_64 on start, and also port it to 64 bits
+- remove useless buildRequires
+- update license
+- fix installation of file ( bug 49263 )
+- add doc and man page
+
+* Tue Nov 18 2008 Zombie Ryushu <ryushu@mandriva.org> 4.4.0-1mdv2009.1
++ Revision: 304124
+- import deutex
+
+
+
+* Fri May 19 2006 Lenny Cartier <lenny@mandrakesoft.com> 4.4.0
+- 4.4.0
