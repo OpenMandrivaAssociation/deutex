@@ -1,6 +1,6 @@
 Name:		deutex
 Version:	4.4.0
-Release:	4
+Release:	5
 Summary:	Summary	A utility for modifying the graphics of Doom IWAD and PWAD files
 Source0:	http://www.teaser.fr/~amajorel/deutex/%{name}-%{version}.tar.bz2
 # this patch s needed otherwise we cannot see fatal error on start, used
