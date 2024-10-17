@@ -7,7 +7,7 @@ Source0:	http://www.teaser.fr/~amajorel/deutex/%{name}-%{version}.tar.bz2
 # to fix a segfault on start, as code was not 64 bits clean
 Patch0:     deutex-4.4.0-fix-error-on-startup.diff
 Patch1:     deutex-4.4.0-fix-error-on-64b.diff
-URL:		http://www.deutex.com/
+URL:		https://www.deutex.com/
 Group:		Games/Arcade
 License:	GPLv2
 BuildRequires:	SDL-devel smpeg-devel SDL_mixer-devel SDL_net-devel
